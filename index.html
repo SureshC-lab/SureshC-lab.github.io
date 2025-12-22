@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Suresh Chaudhary</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Suresh Chaudhary | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =====================
+       STYLE (SANDEEP STYLE)
+  ====================== -->
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
+    * {
+      box-sizing: border-box;
     }
 
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f5f7fb;
+      color: #333;
+    }
+
+    /* ===== HERO ===== */
     .hero {
       background: linear-gradient(90deg, #3f5efb, #8f41e9);
       color: white;
       text-align: center;
-      padding: 110px 20px;
+      padding: 120px 20px;
     }
 
     .hero h1 {
@@ -24,22 +35,180 @@
 
     .hero p {
       font-size: 20px;
-      opacity: 0.95;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* ===== FILTERS ===== */
+    .filters {
+      text-align: center;
+      margin: 50px 0 20px;
+    }
+
+    .filters button {
+      margin: 6px;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 30px;
+      background: #e9ecf5;
+      color: #333;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filters button:hover,
+    .filters button.active {
+      background: #7b2ff7;
+      color: white;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 40px 70px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card h3 {
+      margin: 0 0 8px;
+      color: #3f5efb;
+      text-transform: capitalize;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #7b2ff7;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      background: white;
+      border-top: 1px solid #eaeaea;
+    }
+
+    footer a {
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #3f5efb;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- HERO -->
   <section class="hero">
     <h1>Suresh Chaudhary</h1>
     <p>
-      ML Engineer | Data Scientist | Data Analyst | Python • SQL • Machine Learning • Data Visualization
+      ML Engineer | Data Scientist | Data Analyst |
+      Snowflake | SQL | Python | Cybersecurity & Risk Management |
+      Data Visualization | Feature Engineering
     </p>
   </section>
 
+  <!-- FILTER BUTTONS -->
+  <div class="filters">
+    <button class="active" onclick="filterProjects('all', this)">All</button>
+    <button onclick="filterProjects('Data Science', this)">Data Science</button>
+    <button onclick="filterProjects('Data Analytics', this)">Data Analytics</button>
+    <button onclick="filterProjects('ML', this)">ML</button>
+    <button onclick="filterProjects('Cybersecurity', this)">Cybersecurity</button>
+  </div>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects"></section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="https://github.com/SureshC-lab" target="_blank">GitHub</a>
+    <a href="#" target="_blank">LinkedIn</a>
+    <a href="mailto:your@email.com">Email</a>
+  </footer>
+
+  <!-- =====================
+       SCRIPT (AUTO-GENERATE)
+  ====================== -->
+  <script>
+    const username = "SureshC-lab";
+
+    const featuredRepos = [
+      "house-price-prediction",
+      "ddos-detection",
+      "customer-churn-analysis",
+      "sales-dashboard"
+    ];
+
+    const categoryMap = {
+      "house-price-prediction": "Data Science",
+      "ddos-detection": "Cybersecurity",
+      "customer-churn-analysis": "ML",
+      "sales-dashboard": "Data Analytics"
+    };
+
+    const container = document.getElementById("projects");
+
+    fetch(`https://api.github.com/users/${username}/repos`)
+      .then(res => res.json())
+      .then(repos => {
+        repos.forEach(repo => {
+          if (!featuredRepos.includes(repo.name)) return;
+
+          const category = categoryMap[repo.name] || "Other";
+
+          const card = document.createElement("div");
+          card.className = `project-card ${category}`;
+
+          card.innerHTML = `
+            <h3>${repo.name.replace(/-/g, " ")}</h3>
+            <p>${repo.description || "Project description coming soon."}</p>
+            <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+          `;
+
+          container.appendChild(card);
+        });
+      });
+
+    function filterProjects(category, btn) {
+      document.querySelectorAll(".filters button")
+        .forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      document.querySelectorAll(".project-card")
+        .forEach(card => {
+          card.style.display =
+            category === "all" || card.classList.contains(category)
+              ? "block"
+              : "none";
+        });
+    }
+  </script>
+
 </body>
 </html>
-
