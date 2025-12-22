@@ -1,214 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Suresh Chaudhary | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Machine Learning Portfolio</title>
 
-  <!-- =====================
-       STYLE (SANDEEP STYLE)
-  ====================== -->
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: #f5f7fb;
-      color: #333;
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(90deg, #3f5efb, #8f41e9);
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-    }
-
-    .hero h1 {
-      font-size: 56px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 1000px;
-      margin: auto;
-      line-height: 1.6;
-      opacity: 0.95;
-    }
-
-    /* ===== FILTERS ===== */
-    .filters {
-      text-align: center;
-      margin: 50px 0 20px;
-    }
-
-    .filters button {
-      margin: 6px;
-      padding: 10px 24px;
-      border: none;
-      border-radius: 30px;
-      background: #e9ecf5;
-      color: #333;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .filters button:hover,
-    .filters button.active {
-      background: #7b2ff7;
-      color: white;
-    }
-
-    /* ===== PROJECTS ===== */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      padding: 40px 70px;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .project-card h3 {
-      margin: 0 0 8px;
-      color: #3f5efb;
-      text-transform: capitalize;
-    }
-
-    .project-card p {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .project-card a {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      color: #7b2ff7;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      padding: 45px 20px;
-      background: white;
-      border-top: 1px solid #eaeaea;
-    }
-
-    footer a {
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 600;
-      color: #3f5efb;
-    }
-  </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Suresh Chaudhary</h1>
-    <p>
-      ML Engineer | Data Scientist | Data Analyst |
-      Snowflake | SQL | Python | Cybersecurity & Risk Management |
-      Data Visualization | Feature Engineering
-    </p>
-  </section>
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar">
+        <div class="container">
+            <h2 class="logo">YourName</h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- FILTER BUTTONS -->
-  <div class="filters">
-    <button class="active" onclick="filterProjects('all', this)">All</button>
-    <button onclick="filterProjects('Data Science', this)">Data Science</button>
-    <button onclick="filterProjects('Data Analytics', this)">Data Analytics</button>
-    <button onclick="filterProjects('ML', this)">ML</button>
-    <button onclick="filterProjects('Cybersecurity', this)">Cybersecurity</button>
-  </div>
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Your Name</h1>
+            <h3>Machine Learning Engineer | Data Scientist</h3>
+            <p>
+                Python • Machine Learning • Deep Learning • Data Analytics
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- PROJECTS -->
-  <section class="projects" id="projects"></section>
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-description">
+                <!-- EDIT THIS -->
+                Write a short professional summary about yourself here.
+                Mention your background, interests, and what kind of roles or domains
+                you are passionate about.
+            </p>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <a href="https://github.com/SureshC-lab" target="_blank">GitHub</a>
-    <a href="#" target="_blank">LinkedIn</a>
-    <a href="mailto:your@email.com">Email</a>
-  </footer>
+    <!-- ===================== SKILLS SECTION ===================== -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
 
-  <!-- =====================
-       SCRIPT (AUTO-GENERATE)
-  ====================== -->
-  <script>
-    const username = "SureshC-lab";
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">XGBoost</span>
+                <span class="skill-tag">SHAP</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">Streamlit</span>
+                <span class="skill-tag">Git & GitHub</span>
+            </div>
+        </div>
+    </section>
 
-    const featuredRepos = [
-      "house-price-prediction",
-      "ddos-detection",
-      "customer-churn-analysis",
-      "sales-dashboard"
-    ];
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
 
-    const categoryMap = {
-      "house-price-prediction": "Data Science",
-      "ddos-detection": "Cybersecurity",
-      "customer-churn-analysis": "ML",
-      "sales-dashboard": "Data Analytics"
-    };
+            <div class="projects-grid">
 
-    const container = document.getElementById("projects");
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <img src="assets/images/project1.png" alt="Project Image">
+                    <h3>Project Title</h3>
+                    <p>
+                        Short description of the project.
+                        Mention problem statement and solution briefly.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>XGBoost</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
 
-    fetch(`https://api.github.com/users/${username}/repos`)
-      .then(res => res.json())
-      .then(repos => {
-        repos.forEach(repo => {
-          if (!featuredRepos.includes(repo.name)) return;
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <img src="assets/images/project2.png" alt="Project Image">
+                    <h3>Project Title</h3>
+                    <p>
+                        Short description of the project.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Deep Learning</span>
+                        <span>CNN</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
 
-          const category = categoryMap[repo.name] || "Other";
+                <!-- Add more project cards as needed -->
 
-          const card = document.createElement("div");
-          card.className = `project-card ${category}`;
+            </div>
+        </div>
+    </section>
 
-          card.innerHTML = `
-            <h3>${repo.name.replace(/-/g, " ")}</h3>
-            <p>${repo.description || "Project description coming soon."}</p>
-            <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-          `;
+    <!-- ===================== CERTIFICATIONS SECTION ===================== -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
 
-          container.appendChild(card);
-        });
-      });
+            <div class="certifications-grid">
 
-    function filterProjects(category, btn) {
-      document.querySelectorAll(".filters button")
-        .forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+                <div class="cert-card">
+                    <img src="assets/certificates/aws.png" alt="AWS Certificate">
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p>Issued by Amazon Web Services</p>
+                    <span>2025</span>
+                </div>
 
-      document.querySelectorAll(".project-card")
-        .forEach(card => {
-          card.style.display =
-            category === "all" || card.classList.contains(category)
-              ? "block"
-              : "none";
-        });
-    }
-  </script>
+                <div class="cert-card">
+                    <img src="assets/certificates/google.png" alt="Google Certificate">
+                    <h3>Google Data Analytics Professional Certificate</h3>
+                    <p>Issued by Google</p>
+                    <span>2025</span>
+                </div>
+
+                <div class="cert-card">
+                    <img src="assets/certificates/microsoft.png" alt="Microsoft Certificate">
+                    <h3>Career Essentials in Data Analysis</h3>
+                    <p>Microsoft & LinkedIn</p>
+                    <span>2024</span>
+                </div>
+
+                <!-- Add more certifications if needed -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-description">
+                Feel free to reach out for collaboration, opportunities, or discussions.
+            </p>
+
+            <div class="contact-links">
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="mailto:yourmail@example.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <p>© 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
