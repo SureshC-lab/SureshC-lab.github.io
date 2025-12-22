@@ -1,1 +1,117 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f5f7fb;
+  color: #333;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(90deg, #3f5efb, #8f41e9);
+  color: white;
+  text-align: center;
+  padding: 110px 20px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 950px;
+  margin: auto;
+  opacity: 0.95;
+}
+
+/* ===== Filter Buttons ===== */
+.filters {
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+.filters button {
+  margin: 6px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #e9ecf5;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: #7b2ff7;
+  color: white;
+}
+
+/* ===== Projects Grid ===== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 40px 70px;
+}
+
+/* ===== Project Card ===== */
+.project-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin: 14px 0 8px;
+  color: #3f5efb;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ===== Links ===== */
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #7b2ff7;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 45px 20px;
+  background: white;
+  border-top: 1px solid #eaeaea;
+}
+
+footer a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #3f5efb;
+}
 
