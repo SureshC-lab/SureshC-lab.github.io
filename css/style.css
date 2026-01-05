@@ -14,7 +14,7 @@ body {
   background: linear-gradient(135deg, #3f5efb, #8f41e9);
   color: white;
   text-align: center;
-  padding: 130px 20px;
+  padding: 40px 20px;   /* reduced ~70% */
 }
 
 .hero h1 {
