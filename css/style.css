@@ -309,3 +309,9 @@ footer a {
   text-align: center;
 }
 
+/* ===== About & Projects Title Color (Hero Style) ===== */
+.about .section-title,
+.projects .section-title {
+  color: #8f41e9;
+}
+
