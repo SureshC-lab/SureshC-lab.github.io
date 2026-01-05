@@ -302,3 +302,10 @@ footer a {
   margin: auto;
 }
 
+/* ===================== CENTER SECTION TITLES ===================== */
+
+.about .section-title,
+.projects .section-title {
+  text-align: center;
+}
+
