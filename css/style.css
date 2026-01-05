@@ -268,3 +268,37 @@ footer a {
   transform: translateY(-2px);
 }
 
+/* ===================== CENTER ABOUT & PROJECTS ===================== */
+
+/* About Me */
+.about {
+  background: #f0f6ff; /* same as certifications */
+  text-align: center;
+}
+
+.about .section-title {
+  text-align: center;
+}
+
+.about .section-description {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.05rem;
+}
+
+/* Projects */
+.projects {
+  background: #f0f6ff; /* same color */
+  text-align: center;
+}
+
+.projects .section-title {
+  text-align: center;
+}
+
+/* Keep project cards centered */
+.projects-grid {
+  max-width: 1200px;
+  margin: auto;
+}
+
