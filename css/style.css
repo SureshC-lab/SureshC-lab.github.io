@@ -228,3 +228,43 @@ footer a {
   color: #3f5efb;
 }
 
+/* ===================== GET IN TOUCH ===================== */
+
+.contact {
+  background: linear-gradient(135deg, #3f5efb, #8f41e9);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.contact-links a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 22px;
+  background: white;
+  color: #3f5efb;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+  background: #f1f1ff;
+  transform: translateY(-2px);
+}
+
