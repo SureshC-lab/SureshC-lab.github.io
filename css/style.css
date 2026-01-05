@@ -119,49 +119,85 @@ body {
   font-weight: 500;
 }
 
-<!-- ===================== CERTIFICATIONS SECTION ===================== -->
-<section id="certifications" class="certifications">
-    <div class="container">
-        <h2 class="section-title">Certifications</h2>
+/* ===== Certifications ===== */
 
-        <div class="certifications-grid">
+.certifications {
+  padding: 80px 20px;
+}
 
-            <div class="cert-card">
-                <img src="assets/certificates/aws.png" alt="AWS Certificate">
-                <h3>AWS Certified Cloud Practitioner</h3>
-                <p>Issued by Amazon Web Services</p>
-                <span>Issued Year: 2025</span>
-            </div>
+.certifications .section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #7b2ff7;
+  margin-bottom: 40px;
+}
 
-            <div class="cert-card">
-                <img src="assets/certificates/google.png" alt="Google Certificate">
-                <h3>Google Data Analytics Professional Certificate</h3>
-                <p>Issued by Google</p>
-                <span>Issued Year: 2025</span>
-            </div>
+/* Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
 
-            <div class="cert-card">
-                <img src="assets/certificates/microsoft.png" alt="Microsoft Certificate">
-                <h3>Career Essentials in Data Analysis</h3>
-                <p>Microsoft & LinkedIn</p>
-                <span>Issued Year: 2024</span>
-            </div>
+/* Card */
+.cert-card {
+  background: #f0f6ff;
+  border-radius: 18px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(63, 94, 251, 0.08);
+  transition: transform 0.3s ease;
+}
 
-            <div class="cert-card">
-                <img src="assets/certificates/microsoft.png" alt="Microsoft Certificate">
-                <h3>Career Essentials in Generative AI</h3>
-                <p>Microsoft & LinkedIn</p>
-                <span>Issued Year: 2024</span>
-            </div>
+.cert-card:hover {
+  transform: translateY(-8px);
+}
 
-        </div>
+.cert-card img {
+  height: 55px;
+  margin-bottom: 15px;
+}
 
-        <!-- View All Button -->
-        <div class="cert-btn-wrapper">
-            <a href="#" class="view-cert-btn">View All Certifications</a>
-        </div>
-    </div>
-</section>
+.cert-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3f5efb;
+  margin-bottom: 6px;
+}
+
+.cert-card p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.cert-card span {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Button */
+.cert-btn-wrapper {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.view-cert-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7b2ff7, #9b5cff);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.view-cert-btn:hover {
+  opacity: 0.9;
+}
+
 
 /* ===== Links ===== */
 .project-links a {
